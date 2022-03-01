@@ -1,0 +1,13 @@
+
+.dropdown-menu{
+    min-width: auto;
+    padding: 0.3rem 0;
+    
+}
+.dropdown-toggle::after{
+        display: none !important;
+    }
+
+    a{
+        cursor: pointer;
+    }

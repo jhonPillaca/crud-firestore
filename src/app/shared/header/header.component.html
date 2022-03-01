@@ -1,0 +1,36 @@
+<nav *ngIf="isloggedIn" class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" [routerLink]="['/']" routerLinkActive="router-link-active">Dashboard</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-lg-0">
+                <li class="nav-item px-2">
+                    <a class="nav-link" aria-current="page" [routerLink]="['/login']" routerLinkActive="active">Home</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false" routerLinkActive="active">
+                        <i class="fas fa-user"></i> Welcome {{loggedInUser}}
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li>
+                            <a class="dropdown-item" [routerLink]="['/setting']" routerLinkActive="active"><i
+                                    class="fas fa-cog"></i> Setting</a>
+                        </li>
+                    </ul>
+                </li>
+                <li *ngIf="isloggedIn" class="nav item">
+                    <a class="nav-link" (click)="logout()">
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

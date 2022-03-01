@@ -1,0 +1,14 @@
+h4{
+    display: flex;
+    justify-content: space-between;
+
+    span{
+        a{
+            text-decoration: none;
+            color: #aaaa;
+        }
+        a:hover{
+            color: #797979;
+        }
+    }
+}
